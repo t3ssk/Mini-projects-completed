@@ -5,35 +5,11 @@ $color2: hsl(214, 17%, 51%);
 $color3: hsl(212, 23%, 69%);
 $color4: hsl(210, 46%, 95%);
 
-/* Typography */
+
 html{
     font-size: 13px;
     font-family: Manrope;
 }
-.header{
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-
-.about-her{
-    line-height: 0.8rem;
-    h3{
-        font-size: 1rem;
-    }
-    p{
-        font-size: 0.9rem;
-        letter-spacing: 0.2rem;
-    }
-}
-.share{
-    text-align: center;
-}
-.shareIt{
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    font-size: 0.8rem;
-}
-/* Colors */
 
 body{
     background-color: $color4;
@@ -41,23 +17,79 @@ body{
 
 article{
     background-color: white;
+    display: flex;
+    width: 50%;
+    height: 10%;
+    margin: 18% auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px transparentize($color3, 0.8))
+}
+
+.cover{
+    flex-basis: 40%;
+    width: 100%;
+    margin-right: 40px;
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+
+.article{
+    flex-basis: 60%;
 }
 .header{
     color: $color1;
+    width: 27ch;
+    padding: 20px 10px 0 10px;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
+
 .text{
-    .text{
-        color: $color2;
+    color: $color2;
+    width: 45ch;
+    padding: 0 10px;
 }
+.author{
+    display: flex;
+    height: 60px;
+}
+.Michelle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px 20px;
+}
+
 .about-her{
+    line-height: 0.8rem;
     color: $color3;
     h3{
         color: $color1;
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
     }
 }
+
 .share{
+    position: relative;
+    left: 80%;
+    top: -15%;
     background-color: $color4;
-    svg {fill: $color1;}
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    svg{
+        padding-top: 12px;
+        fill: $color1;
+    }
 }
 
 .share.active{
@@ -69,82 +101,12 @@ svg.active{
     fill: $color3;
 }
 
-/* Styling */
-article{
-    filter: drop-shadow(0 0 10px transparentize($color3, 0.8));
-    border-radius: 10px;
-}
-.cover{
-    background-image: url(../images/drawers.jpg);
-    background-size: cover;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.Michelle{
-    border-radius: 50%;
-}
-.share{
-    border-radius: 50%;
-}
-/* Flexbox */
-article{
-    display: flex;
-}
-.cover{
-    flex-basis: 40%;
-}
-.article{
-    flex-basis: 60%;
-}
-.author{
-        display: flex;
-}
-/* Sizing and position */
-article{
-    width: 50%;
-    height: 10%;
-    margin: 18% auto;
-}
-
-.cover{
-    width: 100%;
-    margin-right: 40px;
-}
-
-.header{
-    width: 27ch;
-    padding: 20px 10px 0 10px;   
-}
-
-.text{
-    width: 45ch;
-    padding: 0 10px;
-}
-.author{
-    height: 60px;
-}
-.Michelle{
-    width: 40px;
-    height: 40px;
-    margin: 10px 20px;
-}
-
-.share{
-    position: relative;
-    left: 80%;
-    top: -15%;
-    width: 40px;
-    height: 40px;
-    svg{
-        padding-top: 12px;
-    }
-}
-
 .shareIt.active{
     opacity: 1;
     pointer-events: auto;
     transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
+    
+
     .arrow{
         width: 0;
         height: 0;
@@ -164,6 +126,9 @@ article{
     opacity: 0;
     background-color: $color1;
     color: $color3;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 0.8rem;
     width: 30%;
     text-align: center;
     padding: 10px;
@@ -232,6 +197,9 @@ article{
         height: 0;
         background-color: $color1;
         color: $color3;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        font-size: 0.8rem;
         width:76%;
         text-align: left;
         padding: 20px 40px;
