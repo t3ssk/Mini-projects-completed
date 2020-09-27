@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+
+$color1: hsl(217, 19%, 35%);
+$color2: hsl(214, 17%, 51%);
+$color3: hsl(212, 23%, 69%);
+$color4: hsl(210, 46%, 95%);
+
+
+html{
+    font-size: 13px;
+    font-family: Manrope;
+}
+
+body{
+    background-color: $color4;
+}
+
+article{
+    background-color: white;
+    display: flex;
+    width: 50%;
+    height: 10%;
+    margin: 18% auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px transparentize($color3, 0.8))
+}
+
+.cover{
+    flex-basis: 40%;
+    width: 100%;
+    margin-right: 40px;
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+
+.article{
+    flex-basis: 60%;
+}
+.header{
+    color: $color1;
+    width: 27ch;
+    padding: 20px 10px 0 10px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.text{
+    color: $color2;
+    width: 45ch;
+    padding: 0 10px;
+}
+.author{
+    display: flex;
+    height: 60px;
+}
+.Michelle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px 20px;
+}
+
+.about-her{
+    line-height: 0.8rem;
+    color: $color3;
+    h3{
+        color: $color1;
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.share{
+    position: relative;
+    left: 80%;
+    top: -15%;
+    background-color: $color4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    svg{
+        padding-top: 12px;
+        fill: $color1;
+    }
+}
+
+.share.active{
+    background-color: $color1;
+    fill: $color4;
+    
+}
+svg.active{
+    fill: $color3;
+}
+
+.shareIt.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
+    
+
+    .arrow{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10.3px 10px 0 10px;
+        border-color:$color1 transparent transparent transparent;
+        line-height: 0px;
+        _border-color: #48556a #000000 #000000 #000000;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        position: absolute;
+        top: 100%;
+        left: 60%;
+    }
+}
+
+.shareIt{
+    opacity: 0;
+    background-color: $color1;
+    color: $color3;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 0.8rem;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 51%;
+    left: 70%;
+    pointer-events: none;
+    transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 1300px){
+    article{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1050px){
+    article{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 650px){
+    article{
+        display: block;
+        height: auto;
+        width: 65%;
+    }
+    .article{
+        padding: 0 20px 0px 20px;
+
+    }
+    .cover{
+        width: 100%;
+       height: 30vh;
+       margin-right: 0px;
+       margin-bottom: 40px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        background-position: top left ;
+        background-size: cover;
+    }
+    .header{
+        width: 23ch;
+        margin: auto;
+    }
+    .text{
+        width: 33ch;
+        margin: auto;
+    }
+    .share{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 92%;
+        z-index: 1;
+        svg{
+            padding-top: 8px;
+            fill: $color1;}
+    }
+    .arrow{
+        display: none;
+    }
+    .shareIt{
+        height: 0;
+        background-color: $color1;
+        color: $color3;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        font-size: 0.8rem;
+        width:76%;
+        text-align: left;
+        padding: 20px 40px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        position: absolute;
+        z-index: 0;
+        top: 88.5%;
+        left: 0%;
+        transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
+        
+    }
+    
+    .share.active{
+        background-color: $color3;
+        svg{
+            padding-top: 8px;
+            fill: $color4;}
+    }
+
+    .shareIt.active{
+        height: 4%;
+    }
+}
