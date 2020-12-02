@@ -1,0 +1,135 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(175,103,233);
+    background: linear-gradient(183deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+.mobile{display: none;}
+section{
+    background-color: white;
+    width: 48vw;
+    height: 57vh;
+    border-radius: 20px;
+    margin: 133px auto;
+    box-shadow: 5px -10px 60px hsla(237, 12%, 33%, 0.247);
+    display: flex;
+    padding-top: 70px;
+    overflow: hidden;
+}
+.image{
+    background-image: url(../assets/images/bg-pattern-desktop.svg);
+    background-size: contain;
+    background-position: -90px left;
+    margin-left: -83px;
+}
+.box{
+    position: absolute;
+    margin-left: -27%;
+    margin-top: 135px;
+}
+.faq{
+    padding-left: 90px;
+}
+h1{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.faqItem{
+    width: 80%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(233, 231, 231);
+}
+
+.faqItem h2 {
+    font-size: 14px;
+}
+
+h2, i {
+    display: inline-block;
+}
+.q{
+    display: flex;
+    justify-items: space-between;
+    cursor: pointer;
+    width: 100%;
+}
+.q i {
+    font-size: 15px;
+    color:  rgb(244, 124, 87);
+
+    font-weight: 700;
+    position: absolute;
+
+}
+
+
+
+.q:hover{
+    color:  hsl(14, 88%, 65%);
+}
+
+.a{
+    color: hsl(240, 6%, 50%);
+    padding-top: 10px;
+    transform: scaleY(0) ;
+    transition: 200ms ease-in;
+    transform-origin: center;
+    width: 80%;
+    height: 0;
+}
+
+.q.active h2 i{
+    transform: rotate(180deg);
+}
+
+.a.active{
+    transition: 200ms ease-in;  
+     transform: scaleY(1);
+     height: auto;
+
+}
